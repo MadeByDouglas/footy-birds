@@ -1,0 +1,82 @@
+
+/* custom fonts */
+
+/* @font-face {
+    font-family: 'Rubik', sans-serif;
+    src: url(fonts/something) format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+video {
+    max-width: 100%;
+}
+
+.iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /*This gives it a 16x9 ratio*/
+}
+  
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* responsive viewport units */
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto auto 1fr auto / auto 1fr auto;
+    margin: 0;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+nav {
+    padding: 20px;
+    grid-column: 1 / 4;
+}
+
+main {
+    grid-column: 2 / 4;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+
+/* @media screen and (min-width: 800px) {
+    body {
+        grid-template-areas:
+        "nav nav nav" 
+        "header header header"
+        "item item item"
+        "footer footer footer";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        grid-template-areas:
+        "nav nav nav nav nav" 
+        "header header header header header"
+        "item item item item item"
+        "footer footer footer footer footer";
+    }
+} */
