@@ -8,6 +8,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
 
+:root {
+    --textColor: #212A2F;
+    --textDarkColor: #ffffff;
+    --backgroundColor: #ffffff;
+    --backgroundAltColor: #1F74A3;
+    --lineColor: #D3D4D5;
+    --shadowColor: 211, 212, 213; /* use with rgba(var(--shadowColor), var(--shadowAlpha)); */
+    --shadowAlpha: 0.5;
+    --linkColor: #F03A43;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -38,28 +49,95 @@ iframe {
 /* responsive viewport units */
 body {
     display: grid;
-    height: 100vh;
-    grid-template: auto auto 1fr auto / auto 1fr auto;
+    min-height: 100vh;
+    /* grid-template: auto auto 1fr auto / auto 1fr auto; */
+    grid-template-rows: auto 1fr auto;
+
     margin: 0;
 
     font-family: 'Rubik', sans-serif;
+    background-color: var(--backgroundColor);
+
 }
 
 nav {
-    padding: 20px;
-    grid-column: 1 / 4;
+    padding: 2rem;
 }
 
-main {
-    grid-column: 2 / 4;
+.cards {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    resize: both;
+    overflow: auto;
+    height: 92vh;
+
+    background: url(../images/image.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: var(--backgroundColor); 
+}
+
+.box {
+    flex: 1 1 292px;
+    max-width: 400px;
+    padding: 20px;
 }
 
 footer {
     padding: 2rem;
     text-align: center;
-    grid-column: 1 / 4;
+    font-weight: 500;
+    color: var(--textColor);
 }
 
+p {
+    font-size: 16pt;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+    color: var(--textColor);
+}
+
+p.subtitle {
+    font-size: 12pt;
+    font-weight: 700;
+    text-align: center;
+    color: var(--textDarkColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    /* font-size: 8vw; */
+    margin: 0.33em 0 0.33em 0;
+    color: var(--textDarkColor);
+}
+
+/* @media screen and (min-width: 600px) {
+    h1 {
+        font-size: 4.5vw;
+    }
+} */
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 48pt;
+    }
+}
 
 /* @media screen and (min-width: 800px) {
     body {
