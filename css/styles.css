@@ -62,6 +62,7 @@ body {
 
 nav {
     padding: 2rem;
+    max-height: 60px;
 }
 
 .cards {
@@ -77,7 +78,7 @@ nav {
     place-items: center;
     resize: both;
     overflow: auto;
-    height: 92vh;
+    height: 94vh;
 
     background: url(../images/image.jpg) no-repeat center center; 
     -webkit-background-size: cover;
@@ -97,7 +98,9 @@ footer {
     padding: 2rem;
     text-align: center;
     font-weight: 500;
-    color: var(--textColor);
+    color: var(--textDarkColor);
+    max-height: 292px;
+    background-color: var(--backgroundAltColor);
 }
 
 p {
