@@ -131,6 +131,10 @@ nav {
     margin: 48px 0 144px 0;
 }
 
+.boxFill {
+    align-self: stretch;
+}
+
 img.imageCard {
     object-fit: cover;
     height: 396px;
