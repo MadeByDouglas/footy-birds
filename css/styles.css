@@ -81,14 +81,14 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 33vw;
+    width: 35vw;
 }
 
 .navBoxEnd {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 33vw;
+    width: 35vw;
     
 }
 
@@ -141,6 +141,10 @@ img.secondaryHero {
     object-fit: cover;
     height: 58vh;
     width: 100%;
+}
+
+img.fit {
+    object-fit: contain;
 }
 
 .hero {
