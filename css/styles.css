@@ -192,6 +192,15 @@ footer {
     background-color: var(--backgroundAltColor);
 }
 
+.contact {
+    display: grid;
+    place-items: center;
+    resize: both;
+    overflow: auto;
+    background-color: var(--backgroundAltColor);
+    height: 94vh;
+}
+
 /* TEXT STYLES */
 
 p {
