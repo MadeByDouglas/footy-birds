@@ -13,35 +13,80 @@
     </head>
     <body>
         <nav>
-            <a href="men.html">Men</a>
-            <a href="women.html">Women</a>
-            <a href="index.html">Footy Birds</a>
-            <a href="about.html">Our Materials</a>
-            <a href="profile.html">
-                <img alt="person" src="images/profile-icon.png" width="19" height="21">
-            </a>
-            <a href="contact.html">
-                <img alt="question" src="images/contact-icon.png" width="21" height="21">
-            </a>
-            <a href="cart.html">
-                <img alt="cart" src="images/cart-icon.png" width="24" height="21">
-            </a>
+            <div class="navBoxStart">
+                <a class="navLink" href="men.html">Men</a>
+                <a class="navLink" href="women.html">Women</a>
+            </div>
+            
+            <a class="navTitle" href="index.html">Footy Birds</a>
+            
+            <div class="navBoxEnd">
+                <a class="navLink" href="about.html">Our Materials</a>
+
+                <a class="navLink" href="profile.html">
+                    <img alt="person" src="images/profile-icon.png" width="19" height="21">
+                </a>
+                <a class="navLink" href="contact.html">
+                    <img alt="question" src="images/contact-icon.png" width="21" height="21">
+                </a>
+                <a class="navLink" href="cart.html">
+                    <img alt="cart" src="images/cart-icon.png" width="24" height="21">
+                </a>
+            </div>
         </nav>
 
         <main>
             <section class="hero">
-                <div>
+                <div class="center">
                     <h1>Cleats Made From Trees</h1>
                     <p class="subtitle">World’s First Sustainable Cleat</p>
                 </div>
-
-
+                
+                <div class="group">
+                    <button class="button heroButton">shop men</button>
+                    <button class="button heroButton">shop women</button>
+                </div>
             </section>
-            <section>
-
+            
+            <section class="favs">
+                <h2 style="margin: 144px 0 72px 0;">Our Favorites</h2>
+                <div class="cards">
+                    <div class="box card">
+                        <img class="imageCard" src="images/merc-1.jpg" alt="Cleat photo">
+                        <div class="cardFooter">
+                            <h3>Tree Striker</h3>
+                            <hr>
+                            <p class="cardBody">Control and Style</p>
+                        </div>
+                        
+                    </div>
+                    <div class="box card">
+                        <img class="imageCard" src="images/phantom-1.jpg" alt="Cleat photo">
+                        <div class="cardFooter">
+                            <h3>Tree Speedster</h3>
+                            <hr>
+                            <p class="cardBody">Ultralight Speed Demons</p>
+                        </div>
+                        
+                    </div>
+                    <div class="box card">
+                        <img class="imageCard" src="images/superfly-1.jpg" alt="Cleat photo">
+                        <div class="cardFooter">
+                            <h3>Tree Fortress</h3>
+                            <hr>
+                            <p class="cardBody">Pinnacle of Defense</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
-
+            
+            <section class="flexColumn">
+                <img src="images/image-2.jpg" alt="Dynamic shot of running person's cleats" class="secondaryHero">
+                <div class="cardColumn">
+                    <h2>Made from Nature, for Nature</h2>
+                    <p class="centerBody">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our best chance for a sustainable future.</p>
+                    <button class="button bigButton">see how</button>
+                </div>
             </section>
         </main>
         
