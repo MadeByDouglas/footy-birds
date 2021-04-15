@@ -183,6 +183,10 @@ nav {
     box-shadow: 0 6px 24px 0px rgba(var(--shadowColor), var(--shadowAlpha));
 }
 
+.card:hover {
+    box-shadow: 0 12px 48px 0px rgba(var(--shadowColor), var(--shadowAlpha));
+}
+
 .cardFooter {
     padding: 12px 30px 12px 30px;
 }
