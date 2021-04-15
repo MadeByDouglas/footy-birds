@@ -124,6 +124,13 @@ nav {
     
 }
 
+.row {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .splitGrid {
     display: grid;
     grid-template-columns: minmax(150px, 25%) 1fr;
@@ -144,6 +151,10 @@ nav {
 .bigBox {
     flex: 3 1 300px;
     margin: 8px;
+}
+
+.order {
+    order: 2;
 }
 
 .sidebar {
@@ -410,6 +421,10 @@ h3 {
     
     .bigButton {
         width: 50vw;
+    }
+
+    .order {
+        order: -1;
     }
 } 
 
