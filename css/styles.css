@@ -54,6 +54,38 @@ hr {
     border: 1px solid var(--lineColor);
 }
 
+/* FORM STYLES */
+
+fieldset {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    width : 100%;
+    padding: 0;
+    margin: 8px 0 18px 0;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    border: 0px;
+    padding: 12px 0 12px 0;
+    background-color: var(--lineColor);
+    height: 48px;
+}
+
+label {
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 4px 0 4px 0;
+    padding: 4px 0 4px 0;
+}
+
 /* DIV STYLES */
 
 body {
@@ -303,7 +335,6 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: inherit;
     font-size: 14px;
     font-weight: 700;
     height: 48px;
@@ -335,6 +366,15 @@ h3 {
     
     background-color: var(--textColor);
     color: var(--textDarkColor);
+}
+
+.forgotButton {
+    border: 0px;
+    color: var(--linkColor);
+    background-color: var(--backgroundColor);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 /* MEDIA QUERIES */
