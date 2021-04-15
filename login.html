@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Account</title>
+
+        <meta name="description" content="Sustainable cleats inspired by Allbirds">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+    </head>
+    <body>
+        <nav>
+            <div class="navBoxStart">
+                <a class="navLink" href="men.html">Men</a>
+                <a class="navLink" href="women.html">Women</a>
+            </div>
+            
+            <a class="navTitle" href="index.html">Footy Birds</a>
+            
+            <div class="navBoxEnd">
+                <a class="navLink" href="about.html">Our Materials</a>
+
+                <a class="navLink" href="profile.html">
+                    <img alt="person" src="images/profile-icon.png" width="19" height="21" class="fit">
+                </a>
+                <a class="navLink" href="contact.html">
+                    <img alt="question" src="images/contact-icon.png" width="21" height="21" class="fit">
+                </a>
+                <a class="navLink" href="cart.html">
+                    <img alt="cart" src="images/cart-icon.png" width="24" height="21" class="fit">
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="cards" style="margin-top: 72px; align-items: flex-start;">
+                <div class="box" style="margin: 12px 40px 12px 40px;">
+                    <h2>Login</h2>
+                    <form>
+                        <fieldset>
+                            <label for="username">email</label>
+                            <input type="email" autocomplete="username" id="username" name="username">
+
+                            <label for="current-password">password</label>
+                            <input type="password" autocomplete="current-password" id="current-password" name="current-password">
+                        </fieldset>
+                        <input type="button" class="button" value="sign in" onclick="">
+                        <input type="button" class="forgotButton" value="forgot password" onclick="">
+                    </form>
+                </div>
+
+                <div class="box" style="margin: 12px 40px 12px 40px;">
+                    <h2>Create an Account</h2>
+                    <p>Registering makes checkout fast and easy and saves your order information in your account.</p>
+                    <form>
+                        <fieldset>
+                            <label for="first-name">first name</label>
+                            <input type="text" autocomplete="given-name" id="first-name" name="first-name">
+
+                            <label for="last-name">last name</label>
+                            <input type="text" autocomplete="family-name" id="last-name" name="last-name">
+
+                            <label for="new-email">email*</label>
+                            <input type="email" autocomplete="email" id="new-email" name="new-email">
+
+                            <label for="new-password">password*</label>
+                            <input type="password" autocomplete="new-password" id="new-password" name="new-password">
+
+                            <label for="confirm-password">confirm password*</label>
+                            <input type="password" autocomplete="new-password" id="confirm-password" name="confirm-password">
+
+                        </fieldset>
+                        <input type="button" class="button" value="register" onclick="">
+                        <p>* required fields</p>
+                    </form>
+                </div>
+                
+            </section>
+            
+        </main>
+        
+        <footer>
+            Made by Douglas with ❤️ in California
+        </footer>
+
+    </body>
+</html>
