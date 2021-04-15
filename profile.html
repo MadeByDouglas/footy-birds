@@ -36,7 +36,47 @@
         </nav>
 
         <main>
-            <section>
+            <section class="cards" style="margin-top: 72px; align-items: flex-start;">
+                <div class="box" style="margin: 12px 40px 12px 40px;">
+                    <h2>Login</h2>
+                    <form>
+                        <fieldset>
+                            <label for="username">email</label>
+                            <input type="email" autocomplete="username" id="username" name="username">
+
+                            <label for="current-password">password</label>
+                            <input type="password" autocomplete="current-password" id="current-password" name="current-password">
+                        </fieldset>
+                        <input type="button" class="button" value="sign in" onclick="">
+                        <input type="button" class="forgotButton" value="forgot password" onclick="">
+                    </form>
+                </div>
+
+                <div class="box" style="margin: 12px 40px 12px 40px;">
+                    <h2>Create an Account</h2>
+                    <p>Registering makes checkout fast and easy and saves your order information in your account.</p>
+                    <form>
+                        <fieldset>
+                            <label for="first-name">first name</label>
+                            <input type="text" autocomplete="given-name" id="first-name" name="first-name">
+
+                            <label for="last-name">last name</label>
+                            <input type="text" autocomplete="family-name" id="last-name" name="last-name">
+
+                            <label for="new-email">email*</label>
+                            <input type="email" autocomplete="email" id="new-email" name="new-email">
+
+                            <label for="new-password">password*</label>
+                            <input type="password" autocomplete="new-password" id="new-password" name="new-password">
+
+                            <label for="confirm-password">confirm password*</label>
+                            <input type="password" autocomplete="new-password" id="confirm-password" name="confirm-password">
+
+                        </fieldset>
+                        <input type="button" class="button" value="register" onclick="">
+                        <p>* required fields</p>
+                    </form>
+                </div>
                 
             </section>
             
