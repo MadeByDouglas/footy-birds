@@ -131,6 +131,21 @@ nav {
     margin: 0;
 }
 
+.splitCard {
+    display: flex;
+
+}
+
+.smallBox {
+    flex: 1 1 200px;
+    margin: 8px;
+}
+
+.bigBox {
+    flex: 3 1 300px;
+    margin: 8px;
+}
+
 .sidebar {
     height: 100vh;
     padding: 2rem;
@@ -184,6 +199,11 @@ nav {
 img.imageCard {
     object-fit: cover;
     height: 396px;
+    width: 100%;
+}
+
+img.smallCard {
+    object-fit: cover;
     width: 100%;
 }
 
