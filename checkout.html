@@ -38,23 +38,11 @@
         <main>
             <section class="cards" style="margin-top: 72px; align-items: flex-start;">
                 <div class="box" style="margin: 12px 40px 12px 40px;">
-                    <h2>Login</h2>
-                    <form>
-                        <fieldset>
-                            <label for="username">email</label>
-                            <input type="email" autocomplete="username" id="username" name="username">
+                    <h3>Contact Information</h3>
+                    <p>Douglas Hewitt (hewittd@usc.edu)</p>
+                    <button class="forgotButton">logout</button>
 
-                            <label for="current-password">password</label>
-                            <input type="password" autocomplete="current-password" id="current-password" name="current-password">
-                        </fieldset>
-                        <input type="button" class="button" value="sign in" onclick="location.href = 'profile.html';">
-                        <input type="button" class="forgotButton" value="forgot password" onclick="">
-                    </form>
-                </div>
-
-                <div class="box" style="margin: 12px 40px 12px 40px;">
-                    <h2>Create an Account</h2>
-                    <p>Registering makes checkout fast and easy and saves your order information in your account.</p>
+                    <h3>Shipping Address</h3>
                     <form>
                         <fieldset>
                             <label for="first-name">first name</label>
@@ -63,19 +51,55 @@
                             <label for="last-name">last name</label>
                             <input type="text" autocomplete="family-name" id="last-name" name="last-name">
 
-                            <label for="new-email">email*</label>
-                            <input type="email" autocomplete="email" id="new-email" name="new-email">
+                            <label for="street">address</label>
+                            <input type="text" autocomplete="address-line1" id="street" name="street">
 
-                            <label for="new-password">password*</label>
-                            <input type="password" autocomplete="new-password" id="new-password" name="new-password">
+                            <label for="apt">apartment, suite, etc. (optional)</label>
+                            <input type="text" autocomplete="address-line2" id="apt" name="apt">
 
-                            <label for="confirm-password">confirm password*</label>
-                            <input type="password" autocomplete="new-password" id="confirm-password" name="confirm-password">
+                            <label for="city">city</label>
+                            <input type="text" autocomplete="address-level2" id="city" name="city">
+
+                            <label for="zip">zip code</label>
+                            <input type="text" autocomplete="postal-code" id="zip" name="zip">
 
                         </fieldset>
-                        <input type="button" class="button" value="register" onclick="location.href = 'profile.html';">
-                        <p>* required fields</p>
                     </form>
+                </div>
+
+                <div class="box">
+                    <div class="splitCard">
+                        <div class="smallBox">
+                            <img src="images/merc-5.jpg" alt="soccer cleats" class="smallCard">
+                        </div>
+                        <div class="bigBox">
+                            <h3>Tree Striker</h3>
+                            <p>Neon Black</p>
+                            <p>Size: 9M</p>
+                            <h4>$129</h4>
+                        </div>
+                    </div>
+
+                    <h3>Payment Information</h3>
+                    <form>
+                        <fieldset>
+                            <label for="credit-name">name for card</label>
+                            <input type="text" autocomplete="cc-name" id="credit-name" name="credit-name">
+
+                            <label for="credit-card">card number</label>
+                            <input type="text" autocomplete="cc-number" id="credit-card" name="credit-card">
+
+                            <label for="credit-exp">expiration date</label>
+                            <input type="text" autocomplete="cc-exp" id="credit-exp" name="credit-exp">
+
+                            <label for="credit-csc">Security Code</label>
+                            <input type="text" autocomplete="cc-csc" id="credit-csc" name="credit-csc">
+
+                        </fieldset>
+                        <input type="button" class="button" value="purchase" onclick="location.href = 'thankyou.html';">
+
+                    </form>
+
                 </div>
                 
             </section>
