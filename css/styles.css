@@ -19,6 +19,7 @@
     --shadowColor: 211, 212, 213; /* use with rgba(var(--shadowColor), var(--shadowAlpha)); */
     --shadowAlpha: 0.5;
     --linkColor: #F03A43;
+    --starColor: #F0EC51;
 }
 
 /* BASIC STYLES */
@@ -53,6 +54,10 @@ iframe {
 hr {
     border: 1px solid var(--lineColor);
 }
+
+.checked {
+    color: var(--starColor);
+  }
 
 /* FORM STYLES */
 
@@ -131,6 +136,14 @@ nav {
     align-items: flex-start;
 }
 
+.rowLeft {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100vw;
+}
+
 .splitGrid {
     display: grid;
     grid-template-columns: minmax(150px, 25%) 1fr;
@@ -149,7 +162,7 @@ nav {
 }
 
 .bigBox {
-    flex: 3 1 300px;
+    flex: 2 1 400px;
     margin: 8px;
 }
 
@@ -189,6 +202,11 @@ nav {
 
 .cardFooter {
     padding: 12px 30px 12px 30px;
+}
+
+.square {
+    min-height: 396px;
+    height: 396px;
 }
 
 .flexColumn {
@@ -335,7 +353,7 @@ a.sidebarLink {
     font-size: 11px;
     font-weight: 600;
     text-align: left;
-    padding-bottom: 6px;
+    padding: 0px 6px 6px 0px;
 }
 
 h1 {
@@ -356,6 +374,14 @@ h3 {
     text-align: left;
     color: var(--textColor);
     
+}
+
+.fa-star {
+    margin: 1.33em 2px 0 2px;
+}
+
+.starHeader {
+    margin: 2px;
 }
 
 /*BUTTON STYLES */
@@ -429,6 +455,10 @@ h3 {
 
     .order {
         order: -1;
+    }
+
+    .rowLeft {
+        width: 70vw;
     }
 } 
 

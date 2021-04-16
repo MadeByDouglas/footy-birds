@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" type="image/png" href="images/favicon.png">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
     <body>
         <nav>
@@ -36,56 +38,121 @@
         </nav>
 
         <main>
-            <div class="splitGrid">
-                <aside class="sidebar">
-                    <a class="sidebarLink" href="index.html">Home</a>
-                    <h3>Men's Shoes</h3>
-                    <p>Synthetic</p>
-                    <p>Leather</p>
-                    <p>Hybrid</p>
-                </aside>
-                
-                <section>
-                    <div class="cards" style="margin-top: 72px;">
-                        <div class="box card">
-                            <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
-                            <div class="cardFooter">
-                                <h3>Tree Striker</h3>
-                                <hr>
-                                <p class="cardBody">Control and Style</p>
+            <section style="padding: 0 2rem 0 2rem;">
+                <div style="margin: 72px 0 48px 0;">
+                    <div style="display: flex;">
+                        <a class="sidebarLink" href="index.html">Home /</a>
+                        <a class="sidebarLink" href="men.html">Men's Shoes</a>
+                    </div>
+                    <h3>Tree Striker</h3>
+                </div>
+
+                <div class="cards">
+                    <div class="bigBox order">
+                        <div class="cards">
+                            <div class="box card square">
+                                <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
+                            </div>
+                            <div class="box card square">
+                                <img src="images/merc-2.jpg" alt="Cleat photo" class="imageCard">
+                            </div>
+                            <div class="box card square">
+                                <img src="images/merc-5.jpg" alt="Cleat photo" class="imageCard">
                             </div>
                             
-                        </div>
-                        <div class="box card">
-                            <img src="images/phantom-1.jpg" alt="Cleat photo" class="imageCard">
-                            <div class="cardFooter">
-                                <h3>Tree Speedster</h3>
-                                <hr>
-                                <p class="cardBody">Ultralight Speed Demons</p>
+                            <div class="box card square">
+                                <img src="images/merc-4.jpg" alt="Cleat photo" class="imageCard">
                             </div>
-                            
-                        </div>
-                        <div class="box card">
-                            <img src="images/superfly-1.jpg" alt="Cleat photo" class="imageCard">
-                            <div class="cardFooter">
-                                <h3>Tree Fortress</h3>
-                                <hr>
-                                <p class="cardBody">Pinnacle of Defense</p>
-                            </div>
-                        </div>
-                        
-                        <div class="box card">
-                            <img src="images/shirt-m-1.jpg" alt="Male in atheltic gear" class="imageCard">
-                            <div class="cardFooter">
-                                <h3>Trainer Zip-up</h3>
-                                <hr>
-                                <p class="cardBody">Sustainable Style</p>
-                            </div>
-                            
                         </div>
                     </div>
-                </section>
-            </div>
+    
+                    <div class="smallBox">
+                        <div>
+                            <h3>Tree Striker</h3>
+                            <p>$129</p>
+                            <button class="button" onclick="location.href = 'cart.html';">add to cart - $129</button>
+                            <p>Free shipping and 30 day returns</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="favs" style="padding: 0 2rem 0 2rem;">
+                <div style="margin: 144px 0 72px 0;">
+                    <h2 >Feedback from the Team</h2>
+                    <div style="display: flex; justify-content: center;">
+                        <span class="fa fa-star starHeader checked"></span>
+                        <span class="fa fa-star starHeader checked"></span>
+                        <span class="fa fa-star starHeader checked"></span>
+                        <span class="fa fa-star starHeader checked"></span>
+                        <span class="fa fa-star starHeader"></span>
+                        <p style="margin-left: 8px;">4.1 out of 5 stars</p>
+                    </div>
+                </div>
+
+                <div style="margin: 0 0 72px 0;">
+                    <hr>
+                    <div class="rowLeft">
+                        <div>
+                            <h4>Bradley</h4>
+                            <p>03.15.21</p>
+                        </div>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div>
+                            <h4>Favorite cleats ever</h4>
+                            <p>super comfy and looks amazing!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="rowLeft">
+                        <div>
+                            <h4>Greg</h4>
+                            <p>03.28.21</p>
+                        </div>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div>
+                            <h4>Almost Perfect</h4>
+                            <p>super comfy and looks amazing!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="rowLeft">
+                        <div>
+                            <h4>Joe</h4>
+                            <p>02.15.21</p>
+                        </div>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div>
+                            <h4>Favorite cleats</h4>
+                            <p>super comfy and looks amazing!</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button class="button" style="max-width: 222px;">write a review</button>
+                </div>
+            </section>
         </main>
         
         <footer>
