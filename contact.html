@@ -5,10 +5,63 @@
         <title>Contact</title>
 
         <meta name="description" content="Sustainable cleats inspired by Allbirds">
-        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <script>
+            emailUser = [];
+
+            $(() => {
+                //modal
+                $("#contactButton").on('click', function() {
+                    $("#contactModal").show();
+                });
+
+                $("#sendButton").on('click', function() {
+                    showConfirmation();
+                    $("#contactModal").hide();
+                });
+
+                $("#closeSpan").on('click', function() {
+                    $("#contactModal").hide();
+                });
+
+                window.onclick = function(event) {
+                    if (event.target.id == 'contactModal') {
+                        $("#contactModal").hide();
+                    }
+                }
+            });
+
+            function getUser() {
+
+                // get relevant user info to display thank you message
+                // in production, all data would be saved and sent to server
+                firstName = $('input[name="firstName"]').val();
+                email = $('input[name="contactEmail"]').val();
+
+                //reset emailUser var so its always fresh data
+                emailUser = [];
+                emailUser.push(firstName);
+                emailUser.push(email);
+
+                // test to verify
+                window.alert(emailUser);
+            }
+
+            function showConfirmation() {
+                getUser();
+                $('#sendInfo').hide();
+                $('#sendInfoConfirmed').show();
+            }
+
+        </script>
 
     </head>
     <body>
@@ -44,15 +97,43 @@
                         Give us a call: 1-888-963-8944<br>
                         Monday - Friday 7AM - 5PM PST
                     </p>
-                    <button class="button heroButton" style="width: 260px;">get in touch</button>
+                    <div id="sendInfo">
+                        <button id="contactButton" class="button heroButton" style="width: 260px;">get in touch</button>
+                    </div>
+                    <div id="sendInfoConfirmed" style="display: none;">
+                        <i class="fa fa-check-circle" style="font-size:180px;color:white;"></i>
+                        <p class="subtitle">thank you message</p>
+                    </div>
                 </div>
-            </section>
-            
+
+                <!-- The Modal -->
+                <div id="contactModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                    <span id="closeSpan" class="close">&times;</span>
+                    <form>
+                        <fieldset>
+                            <label for="first-name">first name</label>
+                            <input type="text" autocomplete="given-name" id="first-name" name="first-name">
+
+                            <label for="last-name">last name</label>
+                            <input type="text" autocomplete="family-name" id="last-name" name="last-name">
+
+                            <label for="new-email">email*</label>
+                            <input type="email" autocomplete="email" id="new-email" name="new-email">
+
+                        </fieldset>
+                        <input id="sendButton" type="button" class="button" value="send">
+                        <p>* required fields</p>
+                    </form>
+                    </div>
+                </div>
+            </section> 
         </main>
         
         <footer>
             Made by Douglas with ❤️ in California
         </footer>
-
     </body>
 </html>

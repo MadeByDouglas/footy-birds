@@ -438,6 +438,42 @@ h3 {
     font-weight: 600;
 }
 
+/* MODAL */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(var(--shadowColor), var(--shadowAlpha))
+  }
+  
+  .modal-content {
+    background-color: var(--backgroundColor);
+    margin: 25% auto;
+    padding: 20px;
+    border: 1px solid var(--lineColor);
+    width: 90%;
+  }
+  
+  .close {
+    color: var(--lineColor);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--linkColor);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 /* MEDIA QUERIES */
 
  @media screen and (min-width: 600px) {
@@ -460,6 +496,10 @@ h3 {
     .rowLeft {
         width: 70vw;
     }
+
+    .modal-content {
+        width: 50%;
+    }
 } 
 
 @media screen and (min-width: 992px) {
@@ -473,5 +513,9 @@ h3 {
     
     .bigButton {
         width: 384px;
+    }
+
+    .modal-content {
+        width: 33%;
     }
 }
