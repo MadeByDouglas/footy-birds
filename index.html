@@ -7,10 +7,18 @@
         <meta name="description" content="Sustainable cleats inspired by Allbirds">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" type="image/png" href="images/favicon.png">
 
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="login.js"></script>
+        <script src="contact.js"></script>
+
+        <!-- VueJS -->
+        <script src="https://unpkg.com/vue@next"></script>
 
     </head>
     <body>
@@ -96,5 +104,12 @@
             Made by Douglas with ❤️ in California
         </footer>
 
+        <!-- Import VueJS App -->
+        <script src="main.js"></script>
+
+        <!-- Mount VueJS App -->
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
     </body>
 </html>
