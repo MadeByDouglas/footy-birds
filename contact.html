@@ -43,20 +43,28 @@
 
                 // get relevant user info to display thank you message
                 // in production, all data would be saved and sent to server
-                firstName = $('input[name="firstName"]').val();
-                email = $('input[name="contactEmail"]').val();
+                firstName = $('input[name="first-name"]').val();
+                lastName = $('input[name="last-name"]').val();
+                email = $('input[name="contact-email"]').val();
 
                 //reset emailUser var so its always fresh data
                 emailUser = [];
                 emailUser.push(firstName);
+                emailUser.push(lastName);
                 emailUser.push(email);
 
                 // test to verify
-                window.alert(emailUser);
+                // window.alert(emailUser);
+            }
+
+            function displayUser() {
+                let displayMessage = "Thanks for reaching out " + emailUser[0] + " " + emailUser[1] + " we will be sending you an email at " + emailUser[2] + " shortly."
+                $('#confirmMessage').text(displayMessage);
             }
 
             function showConfirmation() {
                 getUser();
+                displayUser();
                 $('#sendInfo').hide();
                 $('#sendInfoConfirmed').show();
             }
@@ -100,9 +108,9 @@
                     <div id="sendInfo">
                         <button id="contactButton" class="button heroButton" style="width: 260px;">get in touch</button>
                     </div>
-                    <div id="sendInfoConfirmed" style="display: none;">
+                    <div id="sendInfoConfirmed" class="cardColumn" style="display: none;">
                         <i class="fa fa-check-circle" style="font-size:180px;color:white;"></i>
-                        <p class="subtitle">thank you message</p>
+                        <p id="confirmMessage" class="subtitle" style="margin-top: 1rem;"></p>
                     </div>
                 </div>
 
@@ -120,8 +128,8 @@
                             <label for="last-name">last name</label>
                             <input type="text" autocomplete="family-name" id="last-name" name="last-name">
 
-                            <label for="new-email">email*</label>
-                            <input type="email" autocomplete="email" id="new-email" name="new-email">
+                            <label for="contact-email">email*</label>
+                            <input type="email" autocomplete="email" id="new-email" name="contact-email">
 
                         </fieldset>
                         <input id="sendButton" type="button" class="button" value="send">
