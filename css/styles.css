@@ -246,6 +246,12 @@ img.smallCard {
     width: 100%;
 }
 
+img.banner {
+    object-fit: cover;
+    height: 58vh;
+    width: 100%;
+}
+
 .secondaryHero {
     height: 58vh;
     width: 100vw;

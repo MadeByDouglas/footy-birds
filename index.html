@@ -110,7 +110,7 @@
         <!-- About / Our Materials -->
         <main id="about">
             <section class="flexColumn">
-                <img src="images/image-3.jpg" alt="Person sitting with cleats in the front" class="secondaryHero" style="height: 70vh;">
+                <img src="images/image-3.jpg" alt="Person sitting with cleats in the front" class="banner">
                 
                 <div class="boxFill" style="margin: 72px 27px 144px 27px;">
                     <hr>
@@ -224,13 +224,13 @@
                     <p>Congrats! You get free standard shipping.</p>
                     <div class="splitCard">
                         <div class="smallBox">
-                            <img src="images/merc-5.jpg" alt="soccer cleats" class="smallCard">
+                            <img v-bind:src="image" alt="soccer cleats" class="smallCard">
                         </div>
                         <div class="bigBox">
-                            <h3>Tree Striker</h3>
-                            <p>Neon Black</p>
+                            <h3>{{ product }}</h3>
+                            <p>{{ color }}</p>
                             <p>Size: 9M</p>
-                            <h4>$129</h4>
+                            <h4>{{ price }}</h4>
                         </div>
                     </div>
                 </div>
@@ -238,13 +238,13 @@
                 <div class="box" style="margin: 12px 40px 12px 40px;">
                     <div style="display: flex; justify-content: space-between;">
                         <h4>Subtotal</h4>
-                        <h4>$129 USD</h4>
+                        <h4>{{ price }} USD</h4>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
                         <h4>Shipping</h4>
                         <h4>FREE</h4>
                     </div>
-                    <button class="button" onclick="displayNewPage('checkout');">checkout</button>
+                    <button class="button" onclick="checkout();">checkout</button>
                 </div>
             </section>
         </main>
@@ -311,7 +311,7 @@
                             <input type="text" autocomplete="cc-csc" id="credit-csc" name="credit-csc">
 
                         </fieldset>
-                        <input type="button" class="button" value="purchase" onclick="displayNewPage('thankyou');">
+                        <input type="button" class="button" value="purchase" onclick="purchase();">
                     </form>
                 </div>
             </section>
@@ -538,7 +538,7 @@
                         <div>
                             <h3>Tree Striker</h3>
                             <p>$129</p>
-                            <button class="button" onclick="displayNewPage('cart');">add to cart - $129</button>
+                            <button class="button" onclick="setCart(['Tree Striker', 'Neon Black', 'Control and Style', '$129', './images/merc-1.jpg']);">add to cart - $129</button>
                             <p>Free shipping and 30 day returns</p>
                         </div>
                     </div>
@@ -638,11 +638,11 @@
         </footer>
 
         <!-- Import VueJS App -->
-        <script src="main.js"></script>
+        <script src="./main.js"></script>
 
         <!-- Mount VueJS App -->
         <script>
-            const mountedApp = app.mount('#app')
+            const mountedApp = app.mount('#cart')
         </script>
     </body>
 </html>
