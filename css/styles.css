@@ -103,7 +103,6 @@ body {
 
     font-family: 'Rubik', sans-serif;
     background-color: var(--backgroundColor);
-
 }
 
 nav {
@@ -193,6 +192,7 @@ nav {
 
 .card {
     min-height: 513px;
+    background-color: var(--backgroundColor);
     box-shadow: 0 6px 24px 0px rgba(var(--shadowColor), var(--shadowAlpha));
 }
 
@@ -246,10 +246,26 @@ img.smallCard {
     width: 100%;
 }
 
-img.secondaryHero {
-    object-fit: cover;
+.secondaryHero {
     height: 58vh;
-    width: 100%;
+    width: 100vw;
+
+    z-index: -1;
+    position: relative;
+    top: -100px;
+
+    background: url(../images/image-2.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: var(--backgroundColor);
+}
+
+.parallaxShift {
+    position: relative;
+    top: -100px;
+    background-color: white;
 }
 
 img.fit {
@@ -270,7 +286,7 @@ img.fit {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: var(--backgroundColor); 
+    background-color: var(--backgroundColor);
 }
 
 .group {

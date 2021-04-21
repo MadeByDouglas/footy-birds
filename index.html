@@ -61,7 +61,7 @@
                 </div>
             </section>
             
-            <section class="favs">
+            <section class="favs" style="background-color: white;" data-direction="up" data-speed="0.02">
                 <h2 style="margin: 144px 0 72px 0;">Our Favorites</h2>
                 <div class="cards">
                     <div class="box card" onclick="displayNewPage('productDetails');">
@@ -92,14 +92,18 @@
                     </div>
                 </div>
             </section>
+
+            <!-- parallax section -->
+            <section class="secondaryHero" data-direction="down" data-speed="0.04">
+            </section>
             
-            <section class="flexColumn">
-                <img src="images/image-2.jpg" alt="Dynamic shot of running person's cleats" class="secondaryHero">
-                <div class="cardColumn">
+            <section class="flexColumn parallaxShift" data-direction="up" data-speed="0.02">
+                <div class="cardColumn" style="margin-bottom: 44px;">
                     <h2>Made from Nature, for Nature</h2>
                     <p class="centerBody">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our best chance for a sustainable future.</p>
                     <button class="button bigButton" onclick="displayNewPage('about');">see how</button>
                 </div>
+
             </section>
         </main>
 
