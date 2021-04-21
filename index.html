@@ -26,22 +26,22 @@
         <!-- Nav Bar -->
         <nav>
             <div class="navBoxStart">
-                <a class="navLink" href="men.html">Men</a>
-                <a class="navLink" href="women.html">Women</a>
+                <a class="navLink" id="nav-productsMen">Men</a>
+                <a class="navLink" id="nav-productsWomen">Women</a>
             </div>
             
-            <a class="navTitle" href="index.html">Footy Birds</a>
+            <a class="navTitle" id="nav-home">Footy Birds</a>
             
             <div class="navBoxEnd">
-                <a class="navLink" href="about.html">Our Materials</a>
+                <a class="navLink" id="nav-about">Our Materials</a>
 
-                <a class="navLink" href="login.html">
+                <a class="navLink" id="nav-login">
                     <img alt="person" src="images/profile-icon.png" width="19" height="21" class="fit">
                 </a>
-                <a class="navLink" href="contact.html">
+                <a class="navLink" id="nav-contact">
                     <img alt="question" src="images/contact-icon.png" width="21" height="21" class="fit">
                 </a>
-                <a class="navLink" href="cart.html">
+                <a class="navLink" id="nav-cart">
                     <img alt="cart" src="images/cart-icon.png" width="24" height="21" class="fit">
                 </a>
             </div>
@@ -56,15 +56,15 @@
                 </div>
                 
                 <div class="group">
-                    <button class="button heroButton" onclick="location.href = 'men.html';">shop men</button>
-                    <button class="button heroButton" onclick="location.href = 'women.html';">shop women</button>
+                    <button class="button heroButton" onclick="displayNewPage('productsMen');">shop men</button>
+                    <button class="button heroButton" onclick="displayNewPage('productsWomen');">shop women</button>
                 </div>
             </section>
             
             <section class="favs">
                 <h2 style="margin: 144px 0 72px 0;">Our Favorites</h2>
                 <div class="cards">
-                    <div class="box card" onclick="location.href = 'product.html';">
+                    <div class="box card" onclick="displayNewPage('productDetails');">
                         <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
                         <div class="cardFooter">
                             <h3>Tree Striker</h3>
@@ -98,7 +98,7 @@
                 <div class="cardColumn">
                     <h2>Made from Nature, for Nature</h2>
                     <p class="centerBody">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our best chance for a sustainable future.</p>
-                    <button class="button bigButton" onclick="location.href = 'about.html';">see how</button>
+                    <button class="button bigButton" onclick="displayNewPage('about');">see how</button>
                 </div>
             </section>
         </main>
@@ -174,7 +174,7 @@
             <section class="favs">
                 <div style="margin: 144px 0 72px 0;">
                     <h2 >My Account</h2>
-                    <button class="forgotButton" onclick="location.href = 'login.html';">logout</button>
+                    <button class="forgotButton" onclick="displayNewPage('login');">logout</button>
                 </div>
 
                 <div class="cards" style="margin-top: 72px; align-items: flex-start;">
@@ -234,13 +234,13 @@
                 <div class="box" style="margin: 12px 40px 12px 40px;">
                     <div style="display: flex; justify-content: space-between;">
                         <h4>Subtotal</h4>
-                        <h4>$58 USD</h4>
+                        <h4>$129 USD</h4>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
                         <h4>Shipping</h4>
                         <h4>FREE</h4>
                     </div>
-                    <button class="button" onclick="location.href = 'checkout.html';">checkout</button>
+                    <button class="button" onclick="displayNewPage('checkout');">checkout</button>
                 </div>
             </section>
         </main>
@@ -256,11 +256,11 @@
                     <h3>Shipping Address</h3>
                     <form>
                         <fieldset>
-                            <label for="first-name">first name</label>
-                            <input type="text" autocomplete="given-name" id="first-name" name="first-name">
+                            <label for="shipping-first-name">first name</label>
+                            <input type="text" autocomplete="given-name" id="shipping-first-name" name="shipping-first-name">
 
                             <label for="last-name">last name</label>
-                            <input type="text" autocomplete="family-name" id="last-name" name="last-name">
+                            <input type="text" autocomplete="family-name" id="shipping-last-name" name="shipping-last-name">
 
                             <label for="street">address</label>
                             <input type="text" autocomplete="address-line1" id="street" name="street">
@@ -307,7 +307,7 @@
                             <input type="text" autocomplete="cc-csc" id="credit-csc" name="credit-csc">
 
                         </fieldset>
-                        <input type="button" class="button" value="purchase" onclick="location.href = 'thankyou.html';">
+                        <input type="button" class="button" value="purchase" onclick="displayNewPage('thankyou');">
                     </form>
                 </div>
             </section>
@@ -340,11 +340,11 @@
                     <span id="closeSpan" class="close">&times;</span>
                     <form>
                         <fieldset>
-                            <label for="first-name">first name</label>
-                            <input type="text" autocomplete="given-name" id="first-name" name="first-name">
+                            <label for="contact-first-name">first name</label>
+                            <input type="text" autocomplete="given-name" id="contact-first-name" name="contact-first-name">
 
-                            <label for="last-name">last name</label>
-                            <input type="text" autocomplete="family-name" id="last-name" name="last-name">
+                            <label for="contact-last-name">last name</label>
+                            <input type="text" autocomplete="family-name" id="contact-last-name" name="contact-last-name">
 
                             <label for="contact-email">email*</label>
                             <input type="email" autocomplete="email" id="new-email" name="contact-email">
@@ -371,7 +371,7 @@
                 
                 <section>
                     <div class="cards" style="margin-top: 72px;">
-                        <div class="box card" onclick="location.href = 'product.html';">
+                        <div class="box card" onclick="displayNewPage('productDetails');">
                             <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
                             <div class="cardFooter">
                                 <h3>Tree Striker</h3>
@@ -434,7 +434,7 @@
             <div class="splitGrid">
                 <aside class="sidebar">
                     <a class="sidebarLink" href="index.html">Home</a>
-                    <h3>Men's Shoes</h3>
+                    <h3>Women's Shoes</h3>
                     <p>Synthetic</p>
                     <p>Leather</p>
                     <p>Hybrid</p>
@@ -534,7 +534,7 @@
                         <div>
                             <h3>Tree Striker</h3>
                             <p>$129</p>
-                            <button class="button" onclick="location.href = 'cart.html';">add to cart - $129</button>
+                            <button class="button" onclick="displayNewPage('cart');">add to cart - $129</button>
                             <p>Free shipping and 30 day returns</p>
                         </div>
                     </div>

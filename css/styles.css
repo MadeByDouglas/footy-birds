@@ -341,6 +341,11 @@ a {
     color: var(--textColor);
 }
 
+/* Because our links are JS now and no hrefs, still want them to feel clickable to user */
+a:hover, a:focus { 
+    cursor: pointer;
+}
+
 a.navLink {
     font-size: 12px;
     font-weight: 700;
