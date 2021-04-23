@@ -179,7 +179,7 @@
             <section class="favs">
                 <div style="margin: 144px 0 72px 0;">
                     <h2 >My Account</h2>
-                    <button class="forgotButton" onclick="displayNewPage('login');">logout</button>
+                    <button class="forgotButton" onclick="logout();">logout</button>
                 </div>
 
                 <div class="cards" style="margin-top: 72px; align-items: flex-start;">
@@ -263,8 +263,8 @@
             <section class="cards" style="margin-top: 72px; align-items: flex-start;">
                 <div class="box" style="margin: 12px 40px 12px 40px;">
                     <h3>Contact Information</h3>
-                    <p>Douglas Hewitt (hewittd@usc.edu)</p>
-                    <button class="forgotButton">logout</button>
+                    <p id="checkout-name"></p>
+                    <button id="checkout-loginButton" class="forgotButton" onclick="displayNewPage('login');"></button>
 
                     <h3>Shipping Address</h3>
                     <form>
@@ -294,13 +294,13 @@
                 <div class="box">
                     <div class="splitCard">
                         <div class="smallBox">
-                            <img src="images/merc-5.jpg" alt="soccer cleats" class="smallCard">
+                            <img v-bind:src="image" alt="product photo" class="smallCard">
                         </div>
                         <div class="bigBox">
-                            <h3>Tree Striker</h3>
-                            <p>Neon Black</p>
-                            <p>Size: 9M</p>
-                            <h4>$129</h4>
+                            <h3>{{ product }}</h3>
+                            <p>{{ color }}</p>
+                            <p>Size: {{ size }}</p>
+                            <h4>{{ price }}</h4>
                         </div>
                     </div>
 
@@ -627,6 +627,7 @@
         <script>
             const cartApp = app.mount('#cart');
             const productSelectApp = app2.mount('#productDetails');
+            const checkoutApp = app3.mount('#checkout');
         </script>
     </body>
 </html>

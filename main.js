@@ -54,6 +54,12 @@ $(() => {
 
 function displayNewPage(newPage) {
     $('main').hide();
+
+    // whenever we go to login page, check if user is already logged in and go to profile page instead
+    if (newPage == 'login' && typeof user[2] !== 'undefined') {
+        newPage = 'profile'
+    }
+
     $('#' + newPage).show();
     $('body, html, #' + newPage).scrollTop(0);
 }
@@ -90,11 +96,18 @@ const app2 = Vue.createApp({
     }
 });
 
-// let productarray = ['Tree Striker', 'Neon Black', 'Control and Style', '$129', './images/merc-1.jpg'];
-
-// function productSelect() {
-    
-// }
+const app3 = Vue.createApp({
+    data() {
+        return {
+            product: '',
+            color: '',
+            size: '',
+            tagline: '',
+            price: '',
+            image: '',
+        }
+    }
+});
 
 function setCart() {
     cartApp.product = productSelectApp.product;
@@ -110,6 +123,23 @@ function setCart() {
 
 function checkout() {
     if (cartApp.product != "") {
+        checkoutApp.product = cartApp.product;
+        checkoutApp.color = cartApp.color;
+        checkoutApp.size = cartApp.size;
+        checkoutApp.image = cartApp.image;
+
+        // check if users is logged in
+        if (typeof user[2] !== 'undefined') {
+            $('#checkout-name').text(user[0] + " " + user[1] + " (" + user[2] + ")");
+            $('#shipping-first-name').val(user[0]);
+            $('#shipping-last-name').val(user[1]);
+
+            $('#checkout-loginButton').text("Profile");
+        } else {
+            $('#checkout-name').text("Guest");
+            $('#checkout-loginButton').text("Create Account");
+        }
+
         displayNewPage('checkout');
     } else {
         window.alert("Please add a product to your cart");

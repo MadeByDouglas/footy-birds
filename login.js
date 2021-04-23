@@ -8,6 +8,7 @@ $(() => {
         // email validator
         if( /(.+)@(.+){2,}\.(.+){2,}/.test(user[2])) {
             displayProfileUser();
+            clearAllForms();
             displayNewPage("profile");
         } else {
             window.alert("Please enter a valid email address");
@@ -36,4 +37,18 @@ function getProfileUser() {
 function displayProfileUser() {
     $('#userName').text(user[0] + " " + user[1]);
     $('#userEmail').text(user[2]);
+}
+
+function logout() {
+    //clear user data
+    user = [];
+    //clear any auto filled forms
+    clearAllForms();
+    //display login page
+    displayNewPage('login');
+}
+
+// if you're logging in or out, any other forms like cart should be cleared as well, and contact form unlikely to be left partially filled
+function clearAllForms() {
+    $('input[type!="button"]').val("");
 }
