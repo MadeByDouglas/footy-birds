@@ -16,6 +16,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="login.js"></script>
         <script src="contact.js"></script>
+        <script src="reviews.js"></script>
 
         <!-- VueJS -->
         <script src="https://unpkg.com/vue@next"></script>
@@ -558,67 +559,41 @@
                     </div>
                 </div>
 
-                <div style="margin: 0 0 72px 0;">
-                    <hr>
-                    <div class="rowLeft">
-                        <div>
-                            <h4>Bradley</h4>
-                            <p>03.15.21</p>
-                        </div>
-                        <div>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-                        <div>
-                            <h4>Favorite cleats ever</h4>
-                            <p>super comfy and looks amazing!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class="rowLeft">
-                        <div>
-                            <h4>Greg</h4>
-                            <p>03.28.21</p>
-                        </div>
-                        <div>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <div>
-                            <h4>Almost Perfect</h4>
-                            <p>super comfy and looks amazing!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class="rowLeft">
-                        <div>
-                            <h4>Joe</h4>
-                            <p>02.15.21</p>
-                        </div>
-                        <div>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <div>
-                            <h4>Favorite cleats</h4>
-                            <p>super comfy and looks amazing!</p>
-                        </div>
-                    </div>
+                <div id="showReviews" style="margin: 0 0 72px 0;">
+                    <!-- handled via reviews.js -->
                 </div>
                 <div class="flexCenter">
-                    <button class="button" style="max-width: 222px;">write a review</button>
+                    <button id="reviewModalButton" class="button" style="max-width: 222px;">write a review</button>
                 </div>
+
+                <!-- The Modal -->
+                <div id="reviewModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                    <span id="closeSpanReview" class="close">&times;</span>
+                    <form>
+                        <fieldset>
+                            <label for="review-rating">Star Rating*</label>
+                            <input type="Number" id="review-rating" name="review-rating" min="0" max="5">
+
+                            <label for="review-title">Review Title*</label>
+                            <input type="text" id="review-title" name="review-title">
+
+                            <label for="review-comment">Review*</label>
+                            <input type="text" id="review-comment" name="review-comment">
+
+                            <label for="review-author">Author Name</label>
+                            <input type="text" autocomplete="name" id="review-author" name="review-author">
+
+                            <label for="review-date">Date</label>
+                            <input type="text" autocomplete="family-name" id="review-date" name="review-date">
+                        </fieldset>
+                        <input id="addReviewButton" type="button" class="button" value="send">
+                    </form>
+                    </div>
+                </div>
+
             </section>
         </main>
 
