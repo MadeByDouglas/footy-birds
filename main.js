@@ -6,6 +6,50 @@ $(() => {
         value = $(this).attr('id').substring(4);
         displayNewPage(value);
     });
+
+    $('.box.card').on('click', function() {
+        productSelectApp.product = $(this).find('h3').text();
+        productSelectApp.tagline = $(this).find('p').text();
+        productSelectApp.image = $(this).find('img').attr('src');
+        productSelectApp.ref = 'nav-' + $(this).closest('main').attr('id');
+
+        if (productSelectApp.product == "Tree Striker") {
+            productSelectApp.color = "Neon Black";
+            productSelectApp.size = "9.5";
+            productSelectApp.price = "$129";
+            productSelectApp.image2 = "./images/merc-2.jpg";
+            productSelectApp.image3 = "./images/merc-4.jpg";
+            productSelectApp.image4 = "./images/merc-5.jpg";
+
+
+        } else if (productSelectApp.product == "Tree Speedster") {
+            productSelectApp.color = "Silver Slipstream";
+            productSelectApp.size = "9.5";
+            productSelectApp.price = "$149";
+            productSelectApp.image2 = "./images/phantom-2.jpg";
+            productSelectApp.image3 = "./images/phantom-3.jpg";
+            productSelectApp.image4 = "./images/phantom-4.jpg";
+
+        } else if (productSelectApp.product == "Tree Fortress") {
+            productSelectApp.color = "Orange Fire";
+            productSelectApp.size = "9.5";
+            productSelectApp.price = "$139";
+            productSelectApp.image2 = "./images/superfly-2.jpg";
+            productSelectApp.image3 = "./images/superfly-3.jpg";
+            productSelectApp.image4 = "./images/superfly-5.jpg";
+
+        } else {
+            productSelectApp.color = "Indigo";
+            productSelectApp.size = "Medium";
+            productSelectApp.price = "$49";
+            productSelectApp.image2 = productSelectApp.image;
+            productSelectApp.image3 = productSelectApp.image;
+            productSelectApp.image4 = productSelectApp.image;
+        }
+
+        displayNewPage('productDetails');
+
+    });
 });
 
 function displayNewPage(newPage) {
@@ -20,6 +64,7 @@ const app = Vue.createApp({
         return {
             product: '',
             color: '',
+            size: '',
             tagline: '',
             price: '',
             image: '',
@@ -28,19 +73,43 @@ const app = Vue.createApp({
     }
 });
 
-function setCart(newProduct) {
-    mountedApp.product = newProduct[0];
-    mountedApp.color = newProduct[1];
-    mountedApp.tagline = newProduct[2];
-    mountedApp.price = newProduct[3];
-    mountedApp.image = newProduct[4];
-    mountedApp.inCart = true;
+const app2 = Vue.createApp({
+    data() {
+        return {
+            product: '',
+            color: '',
+            size: '',
+            tagline: '',
+            price: '',
+            image: '',
+            image2: '',
+            image3: '',
+            image4: '',
+            ref: ''
+        }
+    }
+});
+
+// let productarray = ['Tree Striker', 'Neon Black', 'Control and Style', '$129', './images/merc-1.jpg'];
+
+// function productSelect() {
+    
+// }
+
+function setCart() {
+    cartApp.product = productSelectApp.product;
+    cartApp.color = productSelectApp.color;
+    cartApp.size = productSelectApp.size;
+    cartApp.tagline = productSelectApp.tagline;
+    cartApp.price = productSelectApp.price;
+    cartApp.image = productSelectApp.image;
+    cartApp.inCart = true;
 
     displayNewPage('cart');
 }
 
 function checkout() {
-    if (mountedApp.product != "") {
+    if (cartApp.product != "") {
         displayNewPage('checkout');
     } else {
         window.alert("Please add a product to your cart");
@@ -49,12 +118,12 @@ function checkout() {
 
 function purchase() {
     // clear the cart
-    mountedApp.product = '';
-    mountedApp.color = '';
-    mountedApp.tagline = '';
-    mountedApp.price = '';
-    mountedApp.image = '';
-    mountedApp.inCart = false;
+    cartApp.product = '';
+    cartApp.color = '';
+    cartApp.tagline = '';
+    cartApp.price = '';
+    cartApp.image = '';
+    cartApp.inCart = false;
     
     displayNewPage('thankyou');
 }

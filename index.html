@@ -62,10 +62,10 @@
                 </div>
             </section>
             
-            <section class="favs" style="background-color: white;" data-direction="up" data-speed="0.02">
+            <section class="favs" style="background-color: white;" data-direction="up" data-speed="0.03">
                 <h2 style="margin: 144px 0 72px 0;">Our Favorites</h2>
                 <div class="cards">
-                    <div class="box card" onclick="displayNewPage('productDetails');">
+                    <div class="box card">
                         <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
                         <div class="cardFooter">
                             <h3>Tree Striker</h3>
@@ -98,7 +98,7 @@
             <section class="secondaryHero" data-direction="down" data-speed="0.04">
             </section>
             
-            <section class="flexColumn parallaxShift" data-direction="up" data-speed="0.02">
+            <section class="flexColumn parallaxShift" data-direction="up" data-speed="0.03">
                 <div class="cardColumn" style="margin-bottom: 44px;">
                     <h2>Made from Nature, for Nature</h2>
                     <p class="centerBody">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our best chance for a sustainable future.</p>
@@ -230,7 +230,7 @@
                         <div class="bigBox">
                             <h3>{{ product }}</h3>
                             <p>{{ color }}</p>
-                            <p>Size: 9M</p>
+                            <p>Size: {{ size }}</p>
                             <h4>{{ price }}</h4>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                 
                 <section>
                     <div class="cards" style="margin-top: 72px;">
-                        <div class="box card" onclick="displayNewPage('productDetails');">
+                        <div class="box card">
                             <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
                             <div class="cardFooter">
                                 <h3>Tree Striker</h3>
@@ -518,36 +518,36 @@
             <section style="padding: 0 2rem 0 2rem;">
                 <div style="margin: 72px 0 48px 0;">
                     <div style="display: flex;">
-                        <a class="sidebarLink" href="index.html">Home /</a>
-                        <a class="sidebarLink" href="men.html">Men's Shoes</a>
+                        <a class="sidebarLink" id="nav-home">Home /</a>
+                        <a class="sidebarLink" v-bind:id="ref">{{ ref }}</a>
                     </div>
-                    <h3>Tree Striker</h3>
+                    <h3>{{ product }}</h3>
                 </div>
 
                 <div class="cards">
                     <div class="bigBox order">
                         <div class="cards">
                             <div class="box card square">
-                                <img src="images/merc-1.jpg" alt="Cleat photo" class="imageCard">
+                                <img v-bind:src="image" alt="Product photo" class="imageCard">
                             </div>
                             <div class="box card square">
-                                <img src="images/merc-2.jpg" alt="Cleat photo" class="imageCard">
+                                <img v-bind:src="image2" alt="Product photo" class="imageCard">
                             </div>
                             <div class="box card square">
-                                <img src="images/merc-5.jpg" alt="Cleat photo" class="imageCard">
+                                <img v-bind:src="image3" alt="Product photo" class="imageCard">
                             </div>
                             
                             <div class="box card square">
-                                <img src="images/merc-4.jpg" alt="Cleat photo" class="imageCard">
+                                <img v-bind:src="image4" alt="Product photo" class="imageCard">
                             </div>
                         </div>
                     </div>
     
                     <div class="smallBox">
                         <div>
-                            <h3>Tree Striker</h3>
-                            <p>$129</p>
-                            <button class="button" onclick="setCart(['Tree Striker', 'Neon Black', 'Control and Style', '$129', './images/merc-1.jpg']);">add to cart - $129</button>
+                            <h3>{{ product }}</h3>
+                            <p>{{ price }}</p>
+                            <button class="button" onclick="setCart();">add to cart - {{ price }}</button>
                             <p>Free shipping and 30 day returns</p>
                         </div>
                     </div>
@@ -625,7 +625,8 @@
 
         <!-- Mount VueJS App -->
         <script>
-            const mountedApp = app.mount('#cart')
+            const cartApp = app.mount('#cart');
+            const productSelectApp = app2.mount('#productDetails');
         </script>
     </body>
 </html>
