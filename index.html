@@ -220,7 +220,7 @@
 
         <!-- Cart -->
         <main id="cart">
-            <section class="cards" style="margin-top: 72px; align-items: flex-start;">
+            <section v-if="inCart" class="cards" style="margin-top: 72px; align-items: flex-start;">
                 <div class="box" style="margin: 12px 40px 12px 40px;">
                     <p>Congrats! You get free standard shipping.</p>
                     <div class="splitCard">
@@ -246,6 +246,14 @@
                         <h4>FREE</h4>
                     </div>
                     <button class="button" onclick="checkout();">checkout</button>
+                </div>
+            </section>
+
+            <!-- empty cart -->
+            <section v-else class="emptyCart">
+                <div class="cardColumn">
+                    <h2>Your cart is empty. Go Shop!</h2>
+                    <i class="fa fa-shopping-cart" style="font-size:180px;color:var(--linkColor);"></i>
                 </div>
             </section>
         </main>

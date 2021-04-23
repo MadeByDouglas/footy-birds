@@ -23,7 +23,7 @@ const app = Vue.createApp({
             tagline: '',
             price: '',
             image: '',
-
+            inCart: false
         }
     }
 });
@@ -34,6 +34,7 @@ function setCart(newProduct) {
     mountedApp.tagline = newProduct[2];
     mountedApp.price = newProduct[3];
     mountedApp.image = newProduct[4];
+    mountedApp.inCart = true;
 
     displayNewPage('cart');
 }
@@ -53,6 +54,7 @@ function purchase() {
     mountedApp.tagline = '';
     mountedApp.price = '';
     mountedApp.image = '';
+    mountedApp.inCart = false;
     
     displayNewPage('thankyou');
 }

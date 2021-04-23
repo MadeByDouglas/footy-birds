@@ -332,6 +332,15 @@ footer {
     height: 94vh;
 }
 
+.emptyCart {
+    display: grid;
+    place-items: center;
+    resize: both;
+    overflow: auto;
+    background-color: var(--backgroundColor);
+    height: 80vh;
+}
+
 /* TEXT STYLES */
 
 p {
